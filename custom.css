@@ -251,6 +251,7 @@ nav>div {
     width: calc(100% - 2em);
     bottom: -6em;
     height: auto;
+    align-items: center;
 }
 
 #listing #multiple-selection .action {
