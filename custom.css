@@ -220,22 +220,49 @@ nav>div {
     padding: 2em;
     border-radius: var(--radius);
     border: none;
-    margin: 0 .25em .5em;
+    margin: 0;
 }
 
 .card .card-action.full .action:hover {
     background-color: var(--hover);
 }
 
+.card>div:last-child {
+    padding-bottom: 1em;
+}
+
 
 /* Button style */
+.button {
+    background: transparent;
+    box-shadow: 0 0 0 2px var(--blue);
+    border: none;
+    padding: 0.6em 1em 0.5em 1em;
+}
+
+.button:hover {
+    box-shadow: 0 0 0 2px var(--dark-blue);
+}
+
+.button--flat {
+    box-shadow: none;
+}
+
+.button--flat:hover {
+    background-color: var(--hover);
+    box-shadow: none;
+}
+
 .button,
 .button--flat {
     border-radius: var(--radius);
 }
 
-.button--flat:hover {
-    background-color: var(--hover);
+
+/* Input style */
+.card#share input, .card#share select, .input:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px var(--hover);
 }
 
 
@@ -261,7 +288,7 @@ nav>div {
 
 /* Shell style */
 .shell {
-    background-color: var(--surfaceSecondary);
+    background-color: var(--hover);
     border-radius: var(--radius);
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -392,4 +419,21 @@ table tr {
 
 .message span {
     color: var(--icon);
+}
+
+
+/* Notification style */
+.noty_theme__mint.noty_type__success {
+    border-radius: var(--radius);
+}
+
+
+/* Login style */
+#login form .button {
+    margin-top: 2em;
+}
+
+#login .wrong {
+    border-radius: var(--radius);
+    margin-bottom: 0.5em;
 }
