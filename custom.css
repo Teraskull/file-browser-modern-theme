@@ -101,7 +101,8 @@ h1 {
 /* Remove highlight when clicking on mobile */
 #listing .item,
 .action,
-#search.active #result ul li a {
+#search.active #result ul li a,
+#search .boxes>div>div {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -353,7 +354,7 @@ input:focus,
         padding: 1em;
         max-width: 22em;
     }
-    
+
     #file-selection:empty {
         display: none;
     }
@@ -376,6 +377,12 @@ input:focus,
     width: 25%;
     padding: 1em;
     margin: 0;
+}
+
+@media (max-width: 736px) {
+    #search .boxes>div>div {
+        width: 50%;
+    }
 }
 
 #search .boxes>div>div:hover {
