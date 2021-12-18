@@ -335,6 +335,10 @@ nav>div {
     border-radius: var(--radius) !important;
 }
 
+.action:hover {
+    background-color: rgba(142, 178, 255, 0.15) !important;
+}
+
 
 /* Input style */
 input,
@@ -408,7 +412,7 @@ input:focus,
     #file-selection {
         -webkit-box-shadow: none;
         box-shadow: none;
-        background-color: var(--surfaceHover) !important;
+        background-color: var(--surfaceSelect) !important;
         border-radius: var(--radius);
         padding: 1em;
         max-width: 22em;
