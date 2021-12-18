@@ -102,7 +102,9 @@ h1 {
 #listing .item,
 .action,
 #search.active #result ul li a,
-#search .boxes>div>div {
+#search .boxes>div>div,
+.button,
+.file-list li {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -183,6 +185,7 @@ header {
 
 .action .counter {
     background-color: var(--icon);
+    border-radius: 0.4rem;
 }
 
 @media (max-width: 736px) {
@@ -358,6 +361,25 @@ input:focus,
     #file-selection:empty {
         display: none;
     }
+}
+
+
+/* Move file menu style */
+.file-list {
+    padding: 0 1em 0 0;
+}
+
+.file-list li {
+    border-radius: var(--radius);
+    padding: 0.5em 1em;
+}
+
+.file-list li:hover {
+    background: var(--hover) !important;
+}
+
+.file-list li[aria-selected=true] {
+    background: #424855 !important;
 }
 
 
