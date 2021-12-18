@@ -1,14 +1,22 @@
 /* Base style from https://github.com/yurividal/filebrowserdarktheme */
 :root {
-    --background: #282c34;
-    --surfacePrimary: #282c34;
-    --surfaceSecondary: #24272e;
-    --divider: #2c313c;
-    --icon: #79a1c7;
-    --textPrimary: rgba(255, 255, 255, 0.87);
-    --textSecondary: rgba(255, 255, 255, 0.6);
-    --hover: #31353F;
+    --background: #1f2330;
+    --surfacePrimary: #1f2330;
+    --surfaceSecondary: #292d3e;
+    --surfaceHover: #383d51;
+    --surfaceSelect: #4c5374;
+    --divider: #1f2330;
+    --icon: #8eb2ff;
+    --textPrimary: #dee0ee;
+    --textSecondary: #929ac9;
     --radius: 0.7rem;
+    --blue: #8eb2ff;
+    --dark-blue: rgba(56, 71, 102, 0.5);
+    --red: #ef5350;
+    --dark-red: rgba(239, 83, 80, 0.15);
+    --grey: #6c739a;
+    --dark-grey: rgba(108, 115, 154, 0.15);
+    --moon-grey: #f2f2f2;
 }
 
 .share__box__info {
@@ -123,12 +131,12 @@ h1 {
 #listing.mosaic .item:hover,
 #listing.list .item:not(.header):hover {
     box-shadow: none !important;
-    background-color: var(--hover);
+    background-color: var(--surfaceHover);
 }
 
 #listing .item[aria-selected="true"] {
-    background: #424855 !important;
-    color: #fff !important;
+    background: var(--surfaceSelect) !important;
+    color: var(--textPrimary) !important;
 }
 
 #listing h2:nth-of-type(2) {
@@ -162,7 +170,7 @@ h1 {
 
 .breadcrumbs a:hover,
 .breadcrumbs span a:hover {
-    background-color: var(--hover);
+    background-color: var(--surfaceHover);
 }
 
 
@@ -213,7 +221,7 @@ nav {
 }
 
 nav .action:hover {
-    background-color: var(--hover);
+    background-color: var(--surfaceHover);
 }
 
 nav>div {
@@ -236,6 +244,10 @@ nav>div {
     }
 }
 
+.credits {
+    color: var(--textSecondary);
+}
+
 
 /* Card style */
 .card {
@@ -256,7 +268,7 @@ nav>div {
 }
 
 .card .card-action.full .action:hover {
-    background-color: var(--hover);
+    background-color: var(--surfaceHover);
 }
 
 .card>div:last-child {
@@ -270,24 +282,51 @@ nav>div {
     box-shadow: 0 0 0 2px var(--blue);
     border: none;
     padding: 0.6em 1em 0.5em 1em;
+    color: var(--textPrimary);
 }
 
 .button:hover {
-    box-shadow: 0 0 0 2px var(--dark-blue);
+    box-shadow: 0 0 0 2px var(--blue);
+    background-color: var(--blue);
+    color: var(--surfacePrimary);
 }
 
 .button--flat {
+    color: var(--blue);
     box-shadow: none;
 }
 
 .button--flat:hover {
-    background-color: var(--hover);
     box-shadow: none;
+    background-color: var(--dark-blue);
+    color: var(--blue);
+}
+
+.button--flat:disabled,
+.button--flat[disabled] {
+    color: var(--grey);
+    background-color: transparent;
 }
 
 .button,
 .button--flat {
     border-radius: var(--radius);
+}
+
+.button--flat.button--grey {
+    color: var(--grey);
+}
+
+.button--flat.button--grey:hover {
+    background-color: var(--dark-grey);
+}
+
+.button--flat.button--red {
+    color: var(--red);
+}
+
+.button--flat.button--red:hover {
+    background-color: var(--dark-red);
 }
 
 
@@ -300,7 +339,7 @@ nav>div {
 /* Input style */
 input,
 .input {
-    background-color: var(--surfacePrimary);
+    background-color: var(--surfaceHover);
     border: none;
     border-radius: var(--radius);
 }
@@ -308,13 +347,26 @@ input,
 input:focus,
 .input:focus {
     border-color: transparent;
-    box-shadow: 0 0 0 2px var(--hover);
+    box-shadow: 0 0 0 2px #5f6373;
+}
+
+#search #input input:focus {
+    box-shadow: none;
+}
+
+.input--green {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px #147A41;
+}
+
+.input--green:focus {
+    box-shadow: 0 0 0 2px #84c77d;
 }
 
 
 /* Multiple selection style */
 #listing #multiple-selection {
-    background-color: var(--hover);
+    background-color: var(--surfaceSelect);
     border-radius: var(--radius);
     margin: 0 1em 1em 1em;
     padding: 0.5em 0.7em 0.5em 1em;
@@ -327,10 +379,14 @@ input:focus,
     align-items: center;
 }
 
+#listing #multiple-selection p {
+    color: var(--textPrimary);
+}
+
 
 /* Shell style */
 .shell {
-    background-color: var(--hover);
+    background-color: #30364c;
     border-radius: var(--radius);
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -352,7 +408,7 @@ input:focus,
     #file-selection {
         -webkit-box-shadow: none;
         box-shadow: none;
-        background-color: var(--hover) !important;
+        background-color: var(--surfaceHover) !important;
         border-radius: var(--radius);
         padding: 1em;
         max-width: 22em;
@@ -375,11 +431,15 @@ input:focus,
 }
 
 .file-list li:hover {
-    background: var(--hover) !important;
+    background: var(--surfaceHover) !important;
+}
+
+.file-list li:before {
+    color: var(--icon);
 }
 
 .file-list li[aria-selected=true] {
-    background: #424855 !important;
+    background: var(--surfaceSelect) !important;
 }
 
 
@@ -399,6 +459,7 @@ input:focus,
     width: 25%;
     padding: 1em;
     margin: 0;
+    transition: all .2s ease;
 }
 
 @media (max-width: 736px) {
@@ -408,7 +469,7 @@ input:focus,
 }
 
 #search .boxes>div>div:hover {
-    background-color: var(--hover);
+    background-color: var(--surfaceHover);
 }
 
 #search .boxes>div {
@@ -446,10 +507,15 @@ input:focus,
 #search.active input {
     background-color: var(--surfaceSecondary);
     padding: 1em;
+    transition: all .2s ease;
+}
+
+#search.active input:focus {
+    box-shadow: 0 0 0 2px #5f6373 !important;
 }
 
 #dropdown .action:hover {
-    background-color: var(--hover);
+    background-color: var(--surfaceHover);
 }
 
 #search.active #result {
@@ -462,7 +528,7 @@ input:focus,
 }
 
 #search.active #result ul li a:hover {
-    background-color: var(--hover);
+    background-color: var(--surfaceHover);
 }
 
 #search.active #result ul li a span {
@@ -492,13 +558,13 @@ input:focus,
 }
 
 .dashboard #nav ul li:hover {
-    background-color: var(--hover);
+    background-color: var(--surfaceHover);
 }
 
 .dashboard #nav ul li.active {
     border-color: transparent;
-    color: #fff;
-    background-color: #424855;
+    color: var(--textPrimary);
+    background-color: var(--surfaceSelect);
     border-radius: var(--radius);
 }
 
@@ -517,7 +583,7 @@ input:focus,
 }
 
 .card .collapsible:hover {
-    background-color: var(--hover);
+    background-color: var(--surfaceHover);
 }
 
 .collapsible {
