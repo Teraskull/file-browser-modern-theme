@@ -98,6 +98,18 @@ h1 {
 
 /* My theme styles */
 
+/* Remove highlight when clicking on mobile */
+#listing .item,
+.action,
+#search.active #result ul li a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 /* Mosaic view style */
 #listing.mosaic .item {
     box-shadow: none !important;
@@ -205,6 +217,21 @@ nav>div {
     margin-top: 1em;
 }
 
+@media (max-width: 736px) {
+    nav {
+        border-radius: var(--radius);
+        box-shadow: none;
+        margin: 1em;
+        height: calc(100% - 2em);
+    }
+
+    nav.active {
+        margin: 1em;
+        border-radius: var(--radius);
+        height: calc(100% - 2em);
+    }
+}
+
 
 /* Card style */
 .card {
@@ -212,12 +239,6 @@ nav>div {
     background-color: var(--surfaceSecondary);
     -webkit-box-shadow: none;
     box-shadow: none;
-}
-
-.card#share input, .card#share select, .input {
-    background-color: var(--surfacePrimary);
-    border: none;
-    border-radius: var(--radius);
 }
 
 .card li {
@@ -273,7 +294,15 @@ nav>div {
 
 
 /* Input style */
-.card#share input, .card#share select, .input:focus {
+input,
+.input {
+    background-color: var(--surfacePrimary);
+    border: none;
+    border-radius: var(--radius);
+}
+
+input:focus,
+.input:focus {
     border-color: transparent;
     box-shadow: 0 0 0 2px var(--hover);
 }
