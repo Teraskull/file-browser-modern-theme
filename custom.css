@@ -343,6 +343,23 @@ input:focus,
 }
 
 
+/* File selection style */
+@media (max-width: 736px) {
+    #file-selection {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background-color: var(--hover) !important;
+        border-radius: var(--radius);
+        padding: 1em;
+        max-width: 22em;
+    }
+    
+    #file-selection:empty {
+        display: none;
+    }
+}
+
+
 /* Search style */
 #search .boxes {
     border-radius: var(--radius);
