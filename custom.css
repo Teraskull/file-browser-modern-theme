@@ -57,6 +57,7 @@ h1.share__box__title {
 
 .share__box {
     background: var(--background);
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -112,6 +113,7 @@ body {
 
 /* Mosaic view style */
 #listing.mosaic .item {
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     background-color: var(--surfaceSecondary);
     border-radius: var(--radius) !important;
@@ -119,6 +121,7 @@ body {
 
 #listing.mosaic .item:hover,
 #listing.list .item:not(.header):hover {
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     background-color: var(--surfaceHover);
 }
@@ -170,8 +173,6 @@ header {
     box-shadow: none !important;
     padding: 0.5em 0 0.5em 0;
     margin: 0 1em 0 1em;
-    width: -moz-calc(100% - 2em);
-    width: -webkit-calc(100% - 2em);
     width: -o-calc(100% - 2em);
     width: calc(100% - 2em);
 }
@@ -189,6 +190,7 @@ header {
 
 @media (max-width: 736px) {
     #dropdown {
+        -webkit-box-shadow: none;
         box-shadow: none;
         background-color: var(--surfacePrimary) !important;
         border-radius: var(--radius);
@@ -229,6 +231,7 @@ nav>div {
 @media (max-width: 736px) {
     nav {
         border-radius: var(--radius);
+        -webkit-box-shadow: none;
         box-shadow: none;
         margin: 1em;
         height: calc(100% - 2em);
@@ -243,7 +246,11 @@ nav>div {
 }
 
 nav .action {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -279,6 +286,8 @@ nav .action {
 }
 
 .card .card-action.full {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -292,6 +301,7 @@ nav .action {
 /* Button style */
 .button {
     background: transparent;
+    -webkit-box-shadow: 0 0 0 2px var(--blue);
     box-shadow: 0 0 0 2px var(--blue);
     border: none;
     padding: 0.6em 1em 0.5em 1em;
@@ -299,6 +309,7 @@ nav .action {
 }
 
 .button:hover {
+    -webkit-box-shadow: 0 0 0 2px var(--blue);
     box-shadow: 0 0 0 2px var(--blue);
     background-color: var(--blue);
     color: var(--surfacePrimary);
@@ -306,10 +317,12 @@ nav .action {
 
 .button--flat {
     color: var(--blue);
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
 .button--flat:hover {
+    -webkit-box-shadow: none;
     box-shadow: none;
     background-color: var(--dark-blue);
     color: var(--blue);
@@ -364,19 +377,23 @@ input,
 input:focus,
 .input:focus {
     border-color: transparent;
+    -webkit-box-shadow: 0 0 0 2px #5f6373;
     box-shadow: 0 0 0 2px #5f6373;
 }
 
 #search #input input:focus {
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
 .input--green {
     border-color: transparent;
+    -webkit-box-shadow: 0 0 0 2px #147A41;
     box-shadow: 0 0 0 2px #147A41;
 }
 
 .input--green:focus {
+    -webkit-box-shadow: 0 0 0 2px #84c77d;
     box-shadow: 0 0 0 2px #84c77d;
 }
 
@@ -387,12 +404,12 @@ input:focus,
     border-radius: var(--radius);
     margin: 0 1em 1em 1em;
     padding: 0.5em 0.7em 0.5em 1em;
-    width: -moz-calc(100% - 2em);
-    width: -webkit-calc(100% - 2em);
     width: -o-calc(100% - 2em);
     width: calc(100% - 2em);
     bottom: -6em;
     height: auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -408,8 +425,6 @@ input:focus,
     -webkit-box-shadow: none;
     box-shadow: none;
     margin: 0 1em 1em 1em;
-    width: -moz-calc(100% - 2em);
-    width: -webkit-calc(100% - 2em);
     width: -o-calc(100% - 2em);
     width: calc(100% - 2em);
 }
@@ -476,6 +491,8 @@ input:focus,
     width: 25%;
     padding: 1em;
     margin: 0;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
     transition: all .2s ease;
 }
 
@@ -524,10 +541,13 @@ input:focus,
 #search.active input {
     background-color: var(--surfaceSecondary);
     padding: 1em;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
     transition: all .2s ease;
 }
 
 #search.active input:focus {
+    -webkit-box-shadow: 0 0 0 2px #5f6373 !important;
     box-shadow: 0 0 0 2px #5f6373 !important;
 }
 
@@ -549,6 +569,7 @@ input:focus,
 }
 
 #search.active #result ul li a span {
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -649,6 +670,7 @@ table tr {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     max-width: 20em;
     width: 90%;
