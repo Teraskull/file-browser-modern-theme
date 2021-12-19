@@ -639,6 +639,19 @@ table tr {
     border-bottom: none;
 }
 
+.message {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 .message span {
     color: var(--icon);
 }
@@ -1032,22 +1045,30 @@ nav button[aria-label="Logout"] i:after {
 
 /* Settings icon style */
 /* Disable old icons */
-.dashboard .card-content.full .small a i.material-icons {
+.dashboard .card-content.full .small a i.material-icons,
+.dashboard .card .message i.material-icons {
     color: transparent !important;
 }
 
 /* Position old icons */
-.dashboard .card-content.full .small a {
+.dashboard .card-content.full .small a,
+.dashboard .card .message {
     position: relative;
 }
 
 /* Position new icons */
-.dashboard .card-content.full .small a i:after {
+.dashboard .card-content.full .small a i:after,
+.dashboard .card .message i:after {
     position: absolute;
     display: block;
-    top: -0.5em;
+    top: 0em;
 }
 
 .dashboard .card-content.full .small a i:after {
+    top: -0.5em;
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <line x1="18" y1="2" x2="22" y2="6"></line> <path d="M7.5 20.5L19 9l-4-4L3.5 16.5 2 22z"></path> </svg>');
+}
+
+.dashboard .card .message i:after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="10"></circle> <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path> <line x1="9" y1="9" x2="9.01" y2="9"></line> <line x1="15" y1="9" x2="15.01" y2="9"></line> </svg>');
 }
