@@ -596,7 +596,7 @@ input:focus,
 }
 
 .dashboard #nav ul li:hover {
-    background-color: var(--surfaceHover);
+    background-color: rgba(146, 154, 201, 0.1);
 }
 
 .dashboard #nav ul li.active {
@@ -621,7 +621,7 @@ input:focus,
 }
 
 .card .collapsible:hover {
-    background-color: var(--surfaceHover);
+    background-color: rgba(142, 178, 255, 0.15) !important;
 }
 
 .collapsible {
