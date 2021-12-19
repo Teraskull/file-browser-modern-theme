@@ -496,6 +496,7 @@ input:focus,
     -webkit-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease;
+    color: var(--textPrimary);
 }
 
 @media (max-width: 736px) {
@@ -978,6 +979,58 @@ nav button[aria-label="Logout"] i:after {
 .shell .shell__prompt i:after {
     top: 2px;
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polyline points="9 18 15 12 9 6"></polyline> </svg>');
+}
+
+
+/* Search icon style */
+/* Disable old icons */
+#search #result .boxes div i.material-icons,
+#search #result div li i.material-icons {
+    color: transparent !important;
+}
+
+/* Position old icons */
+#search #result div li a {
+    position: relative;
+}
+
+/* Position new icons */
+#search #result .boxes div i:after,
+#search #result div li i.material-icons:after {
+    position: absolute;
+    display: block;
+}
+
+/* Folder icon in search list */
+#search #result div li a[href$="/"] i:after {
+    top: 0.65em;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"></path> </svg>') !important;
+}
+
+/* File icon in search list */
+#search #result div li a i:after {
+    top: 0.65em;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"></path> <polyline points="14 2 14 8 20 8"></polyline> </svg>');
+}
+
+#search #result .boxes div[aria-label="Images"] i:after {
+    top: 0.27em;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect> <circle cx="8.5" cy="8.5" r="1.5"></circle> <polyline points="21 15 16 10 5 21"></polyline> </svg>');
+}
+
+#search #result .boxes div[aria-label="Music"] i:after {
+    top: 0.27em;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <path d="M9 18V5l12-2v13"></path> <circle cx="6" cy="18" r="3"></circle> <circle cx="18" cy="16" r="3"></circle> </svg>');
+}
+
+#search #result .boxes div[aria-label="Video"] i:after {
+    top: 0.27em;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect> <line x1="7" y1="2" x2="7" y2="22"></line> <line x1="17" y1="2" x2="17" y2="22"></line> <line x1="2" y1="12" x2="22" y2="12"></line> <line x1="2" y1="7" x2="7" y2="7"></line> <line x1="2" y1="17" x2="7" y2="17"></line> <line x1="17" y1="17" x2="22" y2="17"></line> <line x1="17" y1="7" x2="22" y2="7"></line> </svg>');
+}
+
+#search #result .boxes div[aria-label="PDF"] i:after {
+    top: 0.27em;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"></path> <polyline points="14 2 14 8 20 8"></polyline> <line x1="16" y1="13" x2="8" y2="13"></line> <line x1="16" y1="17" x2="8" y2="17"></line> <line x1="10" y1="9" x2="8" y2="9"></line> </svg>');
 }
 
 
