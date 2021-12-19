@@ -7,8 +7,8 @@
 
 <div align="center">
 
-  ![Main window](https://user-images.githubusercontent.com/24798198/145964372-8e41b006-56ad-4b4b-9453-74f29a97c4d1.png)
+  ![Main window](https://user-images.githubusercontent.com/24798198/146664480-bdd54ca0-e6c2-4cba-ba51-dab0b8f7a28d.png)
 
-  ![Settings](https://user-images.githubusercontent.com/24798198/145964605-42c3c6a8-6102-4250-8a57-a95d05deb50d.png)
+  ![Settings](https://user-images.githubusercontent.com/24798198/146664515-f22e34a1-aadb-4820-93c8-c0e57dcac632.png)
 
 </div>
