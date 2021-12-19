@@ -587,7 +587,7 @@ input:focus,
     right: 0;
     padding-left: 19px;
     padding-right: 6px;
-    background-color: #282C34;
+    background-color: var(--surfacePrimary);
     background-repeat: no-repeat;
 }
 
