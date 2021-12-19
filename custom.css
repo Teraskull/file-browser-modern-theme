@@ -647,6 +647,10 @@ table tr {
     background: var(--dark-blue);
 }
 
+.card .card-content.full {
+    padding-bottom: 0.5em;
+}
+
 
 /* Notification style */
 .noty_theme__mint.noty_type__success,
