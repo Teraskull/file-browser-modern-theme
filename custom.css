@@ -94,7 +94,9 @@ body {
 #search .boxes>div>div,
 .button,
 .file-list li,
-.dashboard .card-content.full .small a {
+.dashboard .card-content.full .small a,
+#nav .wrapper a,
+.breadcrumbs a {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
