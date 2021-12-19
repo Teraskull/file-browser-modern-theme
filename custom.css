@@ -664,6 +664,28 @@ table tr {
 }
 
 
+/* Placeholder style */
+::-webkit-input-placeholder {
+    color: var(--grey);
+}
+
+::-moz-placeholder {
+    color: var(--grey);
+}
+
+:-ms-input-placeholder {
+    color: var(--grey);
+}
+
+::-ms-input-placeholder {
+    color: var(--grey);
+}
+
+::placeholder {
+    color: var(--grey);
+}
+
+
 /* Login style */
 #login form {
     position: fixed;
