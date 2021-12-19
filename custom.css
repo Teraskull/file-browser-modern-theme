@@ -112,7 +112,8 @@ h1 {
 #search.active #result ul li a,
 #search .boxes>div>div,
 .button,
-.file-list li {
+.file-list li,
+.dashboard .card-content.full .small a {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -635,6 +636,15 @@ table tr {
 
 .message span {
     color: var(--icon);
+}
+
+.dashboard .card-content.full .small a i {
+    padding: 0.5em;
+    border-radius: var(--radius);
+}
+
+.dashboard .card-content.full .small a i:hover {
+    background: var(--dark-blue);
 }
 
 
