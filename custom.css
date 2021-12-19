@@ -121,6 +121,10 @@ h1 {
     user-select: none;
 }
 
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 /* Mosaic view style */
 #listing.mosaic .item {
     box-shadow: none !important;
@@ -287,6 +291,16 @@ nav .action {
 
 .card>div:last-child {
     padding-bottom: 1em;
+}
+
+.card .card-action.full {
+    justify-content: center;
+}
+
+.card .card-action.full .action {
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
 }
 
 
