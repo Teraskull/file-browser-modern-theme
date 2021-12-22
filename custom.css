@@ -920,7 +920,8 @@ nav button[aria-label="Logout"] i:after {
 #listing.mosaic i.material-icons:not(div[aria-label="Clear"] i),
 #listing.list i.material-icons:not(.item.header i):not(div[aria-label="Clear"] i),
 .shell .shell__prompt i.material-icons,
-.card .card-action .action i.material-icons {
+.card .card-action .action i.material-icons,
+main div .message i.material-icons {
     color: transparent !important;
     position: relative;
 }
@@ -929,7 +930,8 @@ nav button[aria-label="Logout"] i:after {
 #listing.mosaic div i:not(div[aria-label="Clear"] i):after,
 #listing.list div i:not(.item.header i):not(div[aria-label="Clear"] i):after,
 .shell .shell__prompt i:after,
-.card .card-action .action i:after {
+.card .card-action .action i:after,
+main div .message i:after {
     position: absolute;
     display: block;
     top: 0;
@@ -988,6 +990,11 @@ nav button[aria-label="Logout"] i:after {
 .shell .shell__prompt i:after {
     top: 2px;
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polyline points="9 18 15 12 9 6"></polyline> </svg>');
+}
+
+/* Emote in empty folders */
+main div .message i:after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="10"></circle> <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path> <line x1="9" y1="9" x2="9.01" y2="9"></line> <line x1="15" y1="9" x2="15.01" y2="9"></line> </svg>');
 }
 
 
