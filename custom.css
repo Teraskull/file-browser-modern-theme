@@ -484,10 +484,6 @@ input:focus,
     border-radius: var(--radius);
 }
 
-#previewer .info .title {
-    color: var(--icon);
-}
-
 #previewer .preview .info .button:hover {
     background-color: rgba(142, 178, 255, 0.15);
 }
@@ -497,6 +493,7 @@ input:focus,
 }
 
 #previewer .preview .info div.title {
+    color: var(--icon);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     display: -webkit-box;
@@ -505,6 +502,7 @@ input:focus,
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
 }
 
 #previewer .preview .info div:last-child {
