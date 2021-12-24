@@ -74,10 +74,6 @@ h1 {
     color: white;
 }
 
-#previewer {
-    background-color: var(--background);
-}
-
 
 
 /* ############### THEME ############### */
@@ -145,6 +141,10 @@ i.material-icons {
 
 #listing.list .item {
     border: none;
+    border-radius: var(--radius);
+}
+
+#listing .item img {
     border-radius: var(--radius);
 }
 
@@ -479,9 +479,29 @@ input:focus,
 
 
 /* File preview style */
+#previewer {
+    background-color: rgba(8, 9, 12, 0.9);
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    #previewer {
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+        background-color: rgba(8, 9, 12, 0.8) !important;
+    }
+}
+
 #previewer>button {
     background-color: rgba(142, 178, 255, 0.15);
     border-radius: var(--radius);
+}
+
+#previewer>button[aria-label="Previous"] {
+    margin-left: 0.5em;
+}
+
+#previewer>button[aria-label="Next"] {
+    margin-right: 0.5em;
 }
 
 #previewer .preview .info .button:hover {
