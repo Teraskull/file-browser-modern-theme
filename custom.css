@@ -96,7 +96,8 @@ body {
 .file-list li,
 .dashboard .card-content.full .small a,
 #nav .wrapper a,
-.breadcrumbs a {
+.breadcrumbs a,
+i.material-icons {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -474,6 +475,73 @@ input:focus,
 
 .file-list li[aria-selected=true] {
     background: var(--surfaceSelect) !important;
+}
+
+
+/* File preview style */
+#previewer>button {
+    background-color: rgba(142, 178, 255, 0.15);
+    border-radius: var(--radius);
+}
+
+#previewer .info .title {
+    color: var(--icon);
+}
+
+#previewer .preview .info .button:hover {
+    background-color: rgba(142, 178, 255, 0.15);
+}
+
+#previewer .preview .info .title i {
+    margin-bottom: 0.2em;
+}
+
+#previewer .preview .info div.title {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#previewer .preview .info div:last-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+#previewer .preview .info .button {
+    display: block;
+    width: 50%;
+}
+
+@media (max-width: 736px) {
+    #previewer .preview .info div:last-child {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    #previewer .preview .info .button {
+        width: 100%;
+    }
+}
+
+#previewer .preview .info div .button div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 
@@ -921,7 +989,10 @@ nav button[aria-label="Logout"] i:after {
 #listing.list i.material-icons:not(.item.header i):not(div[aria-label="Clear"] i),
 .shell .shell__prompt i.material-icons,
 .card .card-action .action i.material-icons,
-main div .message i.material-icons {
+main div .message i.material-icons,
+#previewer button i.material-icons,
+#previewer .info .title i.material-icons,
+#previewer .preview .info div .button i.material-icons {
     color: transparent !important;
     position: relative;
 }
@@ -931,10 +1002,12 @@ main div .message i.material-icons {
 #listing.list div i:not(.item.header i):not(div[aria-label="Clear"] i):after,
 .shell .shell__prompt i:after,
 .card .card-action .action i:after,
-main div .message i:after {
+main div .message i:after,
+#previewer button i:after,
+#previewer .info .title i:after,
+#previewer .preview .info div .button i:after {
     position: absolute;
     display: block;
-    top: 0;
 }
 
 /* Folders in mosaic view */
@@ -946,6 +1019,7 @@ main div .message i:after {
 
 /* Folders in list view */
 #listing.list div[data-dir="true"]:not(#multiple-selection) i:after {
+    top: 0;
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/> </svg>') !important;
 }
 
@@ -963,6 +1037,7 @@ main div .message i:after {
 
 /* Files in list view */
 #listing.list div i:not(.item.header i):not(div[aria-label="Clear"] i):after {
+    top: 0;
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"></path> <polyline points="14 2 14 8 20 8"></polyline> </svg>');
 }
 
@@ -990,6 +1065,50 @@ main div .message i:after {
 .shell .shell__prompt i:after {
     top: 2px;
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polyline points="9 18 15 12 9 6"></polyline> </svg>');
+}
+
+/* Left chevron in file preview */
+#previewer button[aria-label="Previous"] i:after {
+    top: 0.4em;
+    left: 0.38em;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polyline points="15 18 9 12 15 6"></polyline> </svg>');
+}
+
+/* Right chevron in file preview */
+#previewer button[aria-label="Next"] i:after {
+    top: 0.4em;
+    left: 0.42em;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polyline points="9 18 15 12 9 6"></polyline> </svg>');
+}
+
+/* Warning in file preview */
+#previewer .info .title i:after {
+    top: 0px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="10"></circle> <line x1="12" y1="8" x2="12" y2="12"></line> <line x1="12" y1="16" x2="12.01" y2="16"></line> </svg>');
+}
+
+/* Download in file preview */
+#previewer .preview .info div .button:first-child i:after {
+    top: 0px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path> <polyline points="7 10 12 15 17 10"></polyline> <line x1="12" y1="15" x2="12" y2="3"></line> </svg>');
+}
+
+/* Open in file preview */
+#previewer .preview .info div .button:last-child i:after {
+    top: 0px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path> <polyline points="15 3 21 3 21 9"></polyline> <line x1="10" y1="14" x2="21" y2="3"></line> </svg>');
 }
 
 /* Emote in empty folders */
