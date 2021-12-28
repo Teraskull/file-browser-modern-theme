@@ -522,6 +522,9 @@ input:focus,
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -1020,13 +1023,17 @@ main div .message i.material-icons,
 #listing.list div i:not(.item.header i):not(div[aria-label="Clear"] i):after,
 .shell .shell__prompt i:after,
 .card .card-action .action i:after,
-main div .message i:after,
 #previewer button i:after,
 #previewer .info .title i:after,
 #previewer .preview .info div .button i:after {
     position: absolute;
     display: block;
 }
+
+main div .message i:after {
+    display: block;
+}
+
 
 /* Folders in mosaic view */
 #listing.mosaic div[data-dir="true"]:not(#multiple-selection) i:after {
