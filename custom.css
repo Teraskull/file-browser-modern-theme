@@ -483,9 +483,8 @@ input:focus,
     background-color: rgba(8, 9, 12, 0.9);
 }
 
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     #previewer {
-        -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
         background-color: rgba(8, 9, 12, 0.8) !important;
     }
@@ -522,9 +521,6 @@ input:focus,
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -818,6 +814,200 @@ table tr {
     background: var(--dark-red);
     color: var(--red);
     margin-bottom: 0.5em;
+}
+
+
+
+/* ############### EDITOR THEME ############### */
+
+/* Default twilight replaced with modified one-dark */
+/* https://github.com/ajaxorg/ace/blob/master/lib/ace/theme/one_dark.css */
+:root {
+    --editor-white: #fff;
+    --editor-darkwhite: #e8e8e8;
+    /* Darker background */
+    --editor-black: #171a24;
+    --editor-brown: #747369;
+    --editor-grey-1: #abb2bf;
+    --editor-grey-2: #6a6f7a;
+    --editor-grey-3: #5c6370;
+    --editor-grey-4: #3d4350;
+    --editor-grey-5: rgba(76, 87, 103, .19);
+    --editor-grey-6: #282c34;
+    --editor-grey-7: #272b33;
+    --editor-lightred: #f2777a;
+    --editor-red: #e06c75;
+    --editor-lightorange: #e5c07b;
+    --editor-orange: #d19a66;
+    --editor-darkorange: #d27b53;
+    --editor-yellow: #c6dbae;
+    --editor-green: #98c379;
+    --editor-lightblue: #61afef;
+    --editor-blue: #528bff;
+    --editor-teal: #56b6c2;
+    --editor-lightpink: #ffc0cb;
+    --editor-pink: #c678dd;
+}
+
+.ace-twilight .ace_gutter {
+    background: var(--editor-grey-6);
+    color: var(--editor-grey-2);
+}
+
+.ace-twilight .ace_print-margin {
+    width: 1px;
+    background: var(--editor-darkwhite);
+}
+
+.ace-twilight {
+    background-color: var(--editor-black);
+    color: var(--editor-grey-1);
+}
+
+.ace-twilight .ace_cursor {
+    color: var(--editor-blue);
+}
+
+.ace-twilight .ace_marker-layer .ace_selection {
+    background: var(--editor-grey-4);
+}
+
+.ace-twilight.ace_multiselect .ace_selection.ace_start {
+    box-shadow: 0 0 3px 0 var(--editor-grey-6);
+    border-radius: 2px;
+}
+
+.ace-twilight .ace_marker-layer .ace_step {
+    background: var(--editor-yellow);
+}
+
+.ace-twilight .ace_marker-layer .ace_bracket {
+    margin: -1px 0 0 -1px;
+    border: 1px solid var(--editor-brown);
+}
+
+.ace-twilight .ace_marker-layer .ace_active-line {
+    background: var(--editor-grey-5);
+}
+
+.ace-twilight .ace_gutter-active-line {
+    background-color: var(--editor-grey-5);
+}
+
+.ace-twilight .ace_marker-layer .ace_selected-word {
+    border: 1px solid var(--editor-grey-4);
+}
+
+.ace-twilight .ace_fold {
+    background-color: var(--editor-lightblue);
+    border-color: var(--editor-grey-1);
+}
+
+.ace-twilight .ace_keyword {
+    color: var(--editor-pink);
+}
+
+.ace-twilight .ace_keyword.ace_operator {
+    color: var(--editor-pink);
+}
+
+.ace-twilight .ace_keyword.ace_other.ace_unit {
+    color: var(--editor-orange);
+}
+
+.ace-twilight .ace_constant.ace_language {
+    color: var(--editor-orange);
+}
+
+.ace-twilight .ace_constant.ace_numeric {
+    color: var(--editor-orange);
+}
+
+.ace-twilight .ace_constant.ace_character {
+    color: var(--editor-teal);
+}
+
+.ace-twilight .ace_constant.ace_other {
+    color: var(--editor-teal);
+}
+
+.ace-twilight .ace_support.ace_function {
+    color: var(--editor-lightblue);
+}
+
+.ace-twilight .ace_support.ace_constant {
+    color: var(--editor-orange);
+}
+
+.ace-twilight .ace_support.ace_class {
+    color: var(--editor-lightorange);
+}
+
+.ace-twilight .ace_support.ace_type {
+    color: var(--editor-lightorange);
+}
+
+.ace-twilight .ace_storage {
+    color: var(--editor-pink);
+}
+
+.ace-twilight .ace_storage.ace_type {
+    color: var(--editor-pink);
+}
+
+.ace-twilight .ace_invalid {
+    color: var(--editor-white);
+    background-color: var(--editor-lightred);
+}
+
+.ace-twilight .ace_invalid.ace_deprecated {
+    color: var(--editor-grey-7);
+    background-color: var(--editor-darkorange);
+}
+
+.ace-twilight .ace_string {
+    color: var(--editor-green);
+}
+
+.ace-twilight .ace_string.ace_regexp {
+    color: var(--editor-red);
+}
+
+.ace-twilight .ace_comment {
+    font-style: italic;
+    color: var(--editor-grey-3);
+}
+
+.ace-twilight .ace_variable {
+    color: var(--editor-red);
+}
+
+.ace-twilight .ace_variable.ace_parameter {
+    color: var(--editor-orange);
+}
+
+.ace-twilight .ace_meta.ace_tag {
+    color: var(--editor-red);
+}
+
+.ace-twilight .ace_entity.ace_other.ace_attribute-name {
+    color: var(--editor-red);
+}
+
+.ace-twilight .ace_entity.ace_name.ace_function {
+    color: var(--editor-lightblue);
+}
+
+.ace-twilight .ace_entity.ace_name.ace_tag {
+    color: var(--editor-red);
+}
+
+.ace-twilight .ace_markup.ace_heading {
+    color: var(--editor-green);
+}
+
+.ace-twilight .ace_indent-guide {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWPQ09NrYAgMjP4PAAtGAwchHMyAAAAAAElFTkSuQmCC) right repeat-y;
 }
 
 
