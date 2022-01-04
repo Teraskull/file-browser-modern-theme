@@ -841,6 +841,7 @@ table tr {
     --editor-grey-5: rgba(76, 87, 103, .19);
     --editor-grey-6: #282c34;
     --editor-grey-7: #272b33;
+    --editor-nordgrey: rgba(67, 76, 94, 0.7);
     --editor-lightred: #f2777a;
     --editor-red: #e06c75;
     --editor-lightorange: #e5c07b;
@@ -1014,7 +1015,9 @@ table tr {
 }
 
 .ace-twilight .ace_indent-guide {
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWPQ09NrYAgMjP4PAAtGAwchHMyAAAAAAElFTkSuQmCC) right repeat-y;
+    background: none;
+    -webkit-box-shadow: inset -1px 0 0 0 var(--editor-nordgrey);
+    box-shadow: inset -1px 0 0 0 var(--editor-nordgrey);
 }
 
 /* ############### END EDITOR THEME ############### */
