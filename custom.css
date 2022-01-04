@@ -76,7 +76,7 @@ h1 {
 
 
 
-/* ############### THEME ############### */
+/* ############### MAIN THEME ############### */
 
 body {
     background: var(--background);
@@ -483,8 +483,9 @@ input:focus,
     background-color: rgba(8, 9, 12, 0.9);
 }
 
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     #previewer {
+        -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
         background-color: rgba(8, 9, 12, 0.8) !important;
     }
@@ -521,6 +522,9 @@ input:focus,
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -816,6 +820,8 @@ table tr {
     margin-bottom: 0.5em;
 }
 
+/* ############### END MAIN THEME ############### */
+
 
 
 /* ############### EDITOR THEME ############### */
@@ -873,6 +879,7 @@ table tr {
 }
 
 .ace-twilight.ace_multiselect .ace_selection.ace_start {
+    -webkit-box-shadow: 0 0 3px 0 var(--editor-grey-6);
     box-shadow: 0 0 3px 0 var(--editor-grey-6);
     border-radius: 2px;
 }
@@ -1010,9 +1017,11 @@ table tr {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWPQ09NrYAgMjP4PAAtGAwchHMyAAAAAAElFTkSuQmCC) right repeat-y;
 }
 
+/* ############### END EDITOR THEME ############### */
 
 
-/* ############### ICONS ############### */
+
+/* ############### ICON THEME ############### */
 
 /* Header/File-Selection icon style */
 /* Disable old icons */
@@ -1413,3 +1422,5 @@ main div .message i:after {
 .dashboard .card .message i:after {
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="10"></circle> <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path> <line x1="9" y1="9" x2="9.01" y2="9"></line> <line x1="15" y1="9" x2="15.01" y2="9"></line> </svg>');
 }
+
+/* ############### END ICON THEME ############### */
