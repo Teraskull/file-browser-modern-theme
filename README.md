@@ -27,6 +27,30 @@ Add the following to your `custom.css` file:
 @import url("https://cdn.jsdelivr.net/gh/Teraskull/file-browser-modern-theme@master/custom.min.css");
 ```
 
+# Customizing
+
+## Icons
+Because the icon replacements rely on `aria-label`, most of the new icons are only visible when English language is selected.
+
+To use the default icons, remove the styles between the following comments at the end of [`custom.css`](/custom.css):
+```css
+/* ############### ICON THEME ############### */
+
+/* ############### END ICON THEME ############### */
+```
+
+## Editor theme
+1. Copy the contents of any CSS theme from https://github.com/ajaxorg/ace/blob/master/lib/ace/theme/.
+2. Replace all instances of the theme class name with `.ace-twilight`.
+> For example, if you copy the `nord-dark` theme, replace all `.ace-nord-dark` classes with `.ace-twilight`.
+3. Paste the replaced contents between the following comments:
+```css
+/* ############### EDITOR THEME ############### */
+
+/* ############### END EDITOR THEME ############### */
+```
+
+
 ## License
 
 Distributed under the AGPL-3.0 License. See [`LICENSE`](/LICENSE) for more information.
